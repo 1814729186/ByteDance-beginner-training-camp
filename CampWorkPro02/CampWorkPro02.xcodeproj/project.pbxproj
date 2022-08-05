@@ -1,0 +1,639 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2BE31387289BFDF500CBFCC3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE31386289BFDF500CBFCC3 /* AppDelegate.m */; };
+		2BE3138A289BFDF500CBFCC3 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE31389289BFDF500CBFCC3 /* SceneDelegate.m */; };
+		2BE31398289BFDF600CBFCC3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE31397289BFDF600CBFCC3 /* main.m */; };
+		2BE313A2289BFDF700CBFCC3 /* CampWorkPro02Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE313A1289BFDF700CBFCC3 /* CampWorkPro02Tests.m */; };
+		2BE313AC289BFDF700CBFCC3 /* CampWorkPro02UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE313AB289BFDF700CBFCC3 /* CampWorkPro02UITests.m */; };
+		2BE313AE289BFDF700CBFCC3 /* CampWorkPro02UITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE313AD289BFDF700CBFCC3 /* CampWorkPro02UITestsLaunchTests.m */; };
+		2BE313BC289BFF6000CBFCC3 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE313BB289BFF6000CBFCC3 /* MainViewController.m */; };
+		3C17B73B9216FDD9D4B8FE1A /* Pods_CampWorkPro02.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C718775E0E5DA8F099D001DC /* Pods_CampWorkPro02.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2BE3139E289BFDF700CBFCC3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BE3137A289BFDF500CBFCC3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2BE31381289BFDF500CBFCC3;
+			remoteInfo = CampWorkPro02;
+		};
+		2BE313A8289BFDF700CBFCC3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2BE3137A289BFDF500CBFCC3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2BE31381289BFDF500CBFCC3;
+			remoteInfo = CampWorkPro02;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2BE31382289BFDF500CBFCC3 /* CampWorkPro02.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CampWorkPro02.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BE31385289BFDF500CBFCC3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		2BE31386289BFDF500CBFCC3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		2BE31388289BFDF500CBFCC3 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		2BE31389289BFDF500CBFCC3 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		2BE31396289BFDF600CBFCC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2BE31397289BFDF600CBFCC3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2BE3139D289BFDF700CBFCC3 /* CampWorkPro02Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CampWorkPro02Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BE313A1289BFDF700CBFCC3 /* CampWorkPro02Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CampWorkPro02Tests.m; sourceTree = "<group>"; };
+		2BE313A7289BFDF700CBFCC3 /* CampWorkPro02UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CampWorkPro02UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2BE313AB289BFDF700CBFCC3 /* CampWorkPro02UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CampWorkPro02UITests.m; sourceTree = "<group>"; };
+		2BE313AD289BFDF700CBFCC3 /* CampWorkPro02UITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CampWorkPro02UITestsLaunchTests.m; sourceTree = "<group>"; };
+		2BE313BA289BFF4E00CBFCC3 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		2BE313BB289BFF6000CBFCC3 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		4177F1945E96D5BFAD66A406 /* Pods-CampWorkPro02.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CampWorkPro02.debug.xcconfig"; path = "Target Support Files/Pods-CampWorkPro02/Pods-CampWorkPro02.debug.xcconfig"; sourceTree = "<group>"; };
+		C718775E0E5DA8F099D001DC /* Pods_CampWorkPro02.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CampWorkPro02.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E27E0E02A9BCE26CA758F850 /* Pods-CampWorkPro02.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CampWorkPro02.release.xcconfig"; path = "Target Support Files/Pods-CampWorkPro02/Pods-CampWorkPro02.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2BE3137F289BFDF500CBFCC3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3C17B73B9216FDD9D4B8FE1A /* Pods_CampWorkPro02.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BE3139A289BFDF700CBFCC3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BE313A4289BFDF700CBFCC3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2BE31379289BFDF500CBFCC3 = {
+			isa = PBXGroup;
+			children = (
+				2BE31384289BFDF500CBFCC3 /* CampWorkPro02 */,
+				2BE313A0289BFDF700CBFCC3 /* CampWorkPro02Tests */,
+				2BE313AA289BFDF700CBFCC3 /* CampWorkPro02UITests */,
+				2BE31383289BFDF500CBFCC3 /* Products */,
+				DDDE5FC9ACCC4162CEDA9909 /* Pods */,
+				A213E493CED1A69ADE53F74B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2BE31383289BFDF500CBFCC3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2BE31382289BFDF500CBFCC3 /* CampWorkPro02.app */,
+				2BE3139D289BFDF700CBFCC3 /* CampWorkPro02Tests.xctest */,
+				2BE313A7289BFDF700CBFCC3 /* CampWorkPro02UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2BE31384289BFDF500CBFCC3 /* CampWorkPro02 */ = {
+			isa = PBXGroup;
+			children = (
+				2BE31385289BFDF500CBFCC3 /* AppDelegate.h */,
+				2BE31386289BFDF500CBFCC3 /* AppDelegate.m */,
+				2BE31388289BFDF500CBFCC3 /* SceneDelegate.h */,
+				2BE31389289BFDF500CBFCC3 /* SceneDelegate.m */,
+				2BE31396289BFDF600CBFCC3 /* Info.plist */,
+				2BE31397289BFDF600CBFCC3 /* main.m */,
+				2BE313BA289BFF4E00CBFCC3 /* MainViewController.h */,
+				2BE313BB289BFF6000CBFCC3 /* MainViewController.m */,
+			);
+			path = CampWorkPro02;
+			sourceTree = "<group>";
+		};
+		2BE313A0289BFDF700CBFCC3 /* CampWorkPro02Tests */ = {
+			isa = PBXGroup;
+			children = (
+				2BE313A1289BFDF700CBFCC3 /* CampWorkPro02Tests.m */,
+			);
+			path = CampWorkPro02Tests;
+			sourceTree = "<group>";
+		};
+		2BE313AA289BFDF700CBFCC3 /* CampWorkPro02UITests */ = {
+			isa = PBXGroup;
+			children = (
+				2BE313AB289BFDF700CBFCC3 /* CampWorkPro02UITests.m */,
+				2BE313AD289BFDF700CBFCC3 /* CampWorkPro02UITestsLaunchTests.m */,
+			);
+			path = CampWorkPro02UITests;
+			sourceTree = "<group>";
+		};
+		A213E493CED1A69ADE53F74B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C718775E0E5DA8F099D001DC /* Pods_CampWorkPro02.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DDDE5FC9ACCC4162CEDA9909 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4177F1945E96D5BFAD66A406 /* Pods-CampWorkPro02.debug.xcconfig */,
+				E27E0E02A9BCE26CA758F850 /* Pods-CampWorkPro02.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2BE31381289BFDF500CBFCC3 /* CampWorkPro02 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BE313B1289BFDF700CBFCC3 /* Build configuration list for PBXNativeTarget "CampWorkPro02" */;
+			buildPhases = (
+				04A5301A04477B6519AEA985 /* [CP] Check Pods Manifest.lock */,
+				2BE3137E289BFDF500CBFCC3 /* Sources */,
+				2BE3137F289BFDF500CBFCC3 /* Frameworks */,
+				2BE31380289BFDF500CBFCC3 /* Resources */,
+				62BB7C0176B8B736C9950279 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CampWorkPro02;
+			productName = CampWorkPro02;
+			productReference = 2BE31382289BFDF500CBFCC3 /* CampWorkPro02.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2BE3139C289BFDF700CBFCC3 /* CampWorkPro02Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BE313B4289BFDF700CBFCC3 /* Build configuration list for PBXNativeTarget "CampWorkPro02Tests" */;
+			buildPhases = (
+				2BE31399289BFDF700CBFCC3 /* Sources */,
+				2BE3139A289BFDF700CBFCC3 /* Frameworks */,
+				2BE3139B289BFDF700CBFCC3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2BE3139F289BFDF700CBFCC3 /* PBXTargetDependency */,
+			);
+			name = CampWorkPro02Tests;
+			productName = CampWorkPro02Tests;
+			productReference = 2BE3139D289BFDF700CBFCC3 /* CampWorkPro02Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2BE313A6289BFDF700CBFCC3 /* CampWorkPro02UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2BE313B7289BFDF700CBFCC3 /* Build configuration list for PBXNativeTarget "CampWorkPro02UITests" */;
+			buildPhases = (
+				2BE313A3289BFDF700CBFCC3 /* Sources */,
+				2BE313A4289BFDF700CBFCC3 /* Frameworks */,
+				2BE313A5289BFDF700CBFCC3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2BE313A9289BFDF700CBFCC3 /* PBXTargetDependency */,
+			);
+			name = CampWorkPro02UITests;
+			productName = CampWorkPro02UITests;
+			productReference = 2BE313A7289BFDF700CBFCC3 /* CampWorkPro02UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2BE3137A289BFDF500CBFCC3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					2BE31381289BFDF500CBFCC3 = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+					2BE3139C289BFDF700CBFCC3 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 2BE31381289BFDF500CBFCC3;
+					};
+					2BE313A6289BFDF700CBFCC3 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 2BE31381289BFDF500CBFCC3;
+					};
+				};
+			};
+			buildConfigurationList = 2BE3137D289BFDF500CBFCC3 /* Build configuration list for PBXProject "CampWorkPro02" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2BE31379289BFDF500CBFCC3;
+			productRefGroup = 2BE31383289BFDF500CBFCC3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2BE31381289BFDF500CBFCC3 /* CampWorkPro02 */,
+				2BE3139C289BFDF700CBFCC3 /* CampWorkPro02Tests */,
+				2BE313A6289BFDF700CBFCC3 /* CampWorkPro02UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2BE31380289BFDF500CBFCC3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BE3139B289BFDF700CBFCC3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BE313A5289BFDF700CBFCC3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		04A5301A04477B6519AEA985 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CampWorkPro02-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		62BB7C0176B8B736C9950279 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CampWorkPro02/Pods-CampWorkPro02-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CampWorkPro02/Pods-CampWorkPro02-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CampWorkPro02/Pods-CampWorkPro02-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2BE3137E289BFDF500CBFCC3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BE31387289BFDF500CBFCC3 /* AppDelegate.m in Sources */,
+				2BE31398289BFDF600CBFCC3 /* main.m in Sources */,
+				2BE313BC289BFF6000CBFCC3 /* MainViewController.m in Sources */,
+				2BE3138A289BFDF500CBFCC3 /* SceneDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BE31399289BFDF700CBFCC3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BE313A2289BFDF700CBFCC3 /* CampWorkPro02Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2BE313A3289BFDF700CBFCC3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BE313AE289BFDF700CBFCC3 /* CampWorkPro02UITestsLaunchTests.m in Sources */,
+				2BE313AC289BFDF700CBFCC3 /* CampWorkPro02UITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2BE3139F289BFDF700CBFCC3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2BE31381289BFDF500CBFCC3 /* CampWorkPro02 */;
+			targetProxy = 2BE3139E289BFDF700CBFCC3 /* PBXContainerItemProxy */;
+		};
+		2BE313A9289BFDF700CBFCC3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2BE31381289BFDF500CBFCC3 /* CampWorkPro02 */;
+			targetProxy = 2BE313A8289BFDF700CBFCC3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2BE313AF289BFDF700CBFCC3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		2BE313B0289BFDF700CBFCC3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2BE313B2289BFDF700CBFCC3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4177F1945E96D5BFAD66A406 /* Pods-CampWorkPro02.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P5Q8XB2P32;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CampWorkPro02/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.prac.mazhongping.CampWorkPro02;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2BE313B3289BFDF700CBFCC3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E27E0E02A9BCE26CA758F850 /* Pods-CampWorkPro02.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P5Q8XB2P32;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = CampWorkPro02/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.prac.mazhongping.CampWorkPro02;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2BE313B5289BFDF700CBFCC3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 796K3C9WZZ;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.prac.mazhongping.CampWorkPro02Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CampWorkPro02.app/CampWorkPro02";
+			};
+			name = Debug;
+		};
+		2BE313B6289BFDF700CBFCC3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 796K3C9WZZ;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.prac.mazhongping.CampWorkPro02Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CampWorkPro02.app/CampWorkPro02";
+			};
+			name = Release;
+		};
+		2BE313B8289BFDF700CBFCC3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 796K3C9WZZ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.prac.mazhongping.CampWorkPro02UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CampWorkPro02;
+			};
+			name = Debug;
+		};
+		2BE313B9289BFDF700CBFCC3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 796K3C9WZZ;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.prac.mazhongping.CampWorkPro02UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CampWorkPro02;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2BE3137D289BFDF500CBFCC3 /* Build configuration list for PBXProject "CampWorkPro02" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BE313AF289BFDF700CBFCC3 /* Debug */,
+				2BE313B0289BFDF700CBFCC3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2BE313B1289BFDF700CBFCC3 /* Build configuration list for PBXNativeTarget "CampWorkPro02" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BE313B2289BFDF700CBFCC3 /* Debug */,
+				2BE313B3289BFDF700CBFCC3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2BE313B4289BFDF700CBFCC3 /* Build configuration list for PBXNativeTarget "CampWorkPro02Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BE313B5289BFDF700CBFCC3 /* Debug */,
+				2BE313B6289BFDF700CBFCC3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2BE313B7289BFDF700CBFCC3 /* Build configuration list for PBXNativeTarget "CampWorkPro02UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2BE313B8289BFDF700CBFCC3 /* Debug */,
+				2BE313B9289BFDF700CBFCC3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2BE3137A289BFDF500CBFCC3 /* Project object */;
+}

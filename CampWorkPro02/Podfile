@@ -1,0 +1,8 @@
+platform :ios , "8.0"
+use_frameworks!
+target "CampWorkPro02" do 
+pod 'ReactiveObjC'
+pod 'Masonry'
+pod 'AFNetworking'
+pod 'SDWebImage'
+end
