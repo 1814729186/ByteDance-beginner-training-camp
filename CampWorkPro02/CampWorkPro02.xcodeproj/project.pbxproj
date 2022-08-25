@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B2FFEF7289D90F2003DE1C6 /* SystemConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B2FFEF6289D90F2003DE1C6 /* SystemConfig.m */; };
+		2B2FFEFA289E2B2C003DE1C6 /* WeatherModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B2FFEF9289E2B2C003DE1C6 /* WeatherModel.m */; };
+		2B2FFEFD289E2B5D003DE1C6 /* WeatherViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B2FFEFC289E2B5D003DE1C6 /* WeatherViewModel.m */; };
+		2B2FFF02289F98D0003DE1C6 /* data.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2B2FFF01289F98D0003DE1C6 /* data.bundle */; };
+		2B2FFF06289FE614003DE1C6 /* WeatherTimelineCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B2FFF05289FE614003DE1C6 /* WeatherTimelineCollectionViewCell.m */; };
+		2B2FFF0928A048E1003DE1C6 /* WeatherDaylineTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B2FFF0828A048E1003DE1C6 /* WeatherDaylineTableViewCell.m */; };
+		2B2FFF0C28A135A3003DE1C6 /* resources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2B2FFF0B28A135A3003DE1C6 /* resources.bundle */; };
 		2BE31387289BFDF500CBFCC3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE31386289BFDF500CBFCC3 /* AppDelegate.m */; };
 		2BE3138A289BFDF500CBFCC3 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE31389289BFDF500CBFCC3 /* SceneDelegate.m */; };
 		2BE31398289BFDF600CBFCC3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE31397289BFDF600CBFCC3 /* main.m */; };
@@ -35,6 +42,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2B2FFEF5289D90DD003DE1C6 /* SystemConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SystemConfig.h; sourceTree = "<group>"; };
+		2B2FFEF6289D90F2003DE1C6 /* SystemConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SystemConfig.m; sourceTree = "<group>"; };
+		2B2FFEF8289E2B20003DE1C6 /* WeatherModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeatherModel.h; sourceTree = "<group>"; };
+		2B2FFEF9289E2B2C003DE1C6 /* WeatherModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeatherModel.m; sourceTree = "<group>"; };
+		2B2FFEFB289E2B49003DE1C6 /* WeatherViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeatherViewModel.h; sourceTree = "<group>"; };
+		2B2FFEFC289E2B5D003DE1C6 /* WeatherViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeatherViewModel.m; sourceTree = "<group>"; };
+		2B2FFEFE289E2B7F003DE1C6 /* WeatherModelProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeatherModelProtocol.h; sourceTree = "<group>"; };
+		2B2FFEFF289E2BC8003DE1C6 /* WeatherViewComtrollerProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeatherViewComtrollerProtocol.h; sourceTree = "<group>"; };
+		2B2FFF00289F8FC1003DE1C6 /* SystemDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SystemDefines.h; sourceTree = "<group>"; };
+		2B2FFF01289F98D0003DE1C6 /* data.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = data.bundle; sourceTree = "<group>"; };
+		2B2FFF04289FE603003DE1C6 /* WeatherTimelineCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeatherTimelineCollectionViewCell.h; sourceTree = "<group>"; };
+		2B2FFF05289FE614003DE1C6 /* WeatherTimelineCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeatherTimelineCollectionViewCell.m; sourceTree = "<group>"; };
+		2B2FFF0728A048CE003DE1C6 /* WeatherDaylineTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeatherDaylineTableViewCell.h; sourceTree = "<group>"; };
+		2B2FFF0828A048E1003DE1C6 /* WeatherDaylineTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeatherDaylineTableViewCell.m; sourceTree = "<group>"; };
+		2B2FFF0B28A135A3003DE1C6 /* resources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = resources.bundle; sourceTree = "<group>"; };
 		2BE31382289BFDF500CBFCC3 /* CampWorkPro02.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CampWorkPro02.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BE31385289BFDF500CBFCC3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2BE31386289BFDF500CBFCC3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -83,6 +105,8 @@
 		2BE31379289BFDF500CBFCC3 = {
 			isa = PBXGroup;
 			children = (
+				2B2FFF0B28A135A3003DE1C6 /* resources.bundle */,
+				2B2FFF01289F98D0003DE1C6 /* data.bundle */,
 				2BE31384289BFDF500CBFCC3 /* CampWorkPro02 */,
 				2BE313A0289BFDF700CBFCC3 /* CampWorkPro02Tests */,
 				2BE313AA289BFDF700CBFCC3 /* CampWorkPro02UITests */,
@@ -113,6 +137,19 @@
 				2BE31397289BFDF600CBFCC3 /* main.m */,
 				2BE313BA289BFF4E00CBFCC3 /* MainViewController.h */,
 				2BE313BB289BFF6000CBFCC3 /* MainViewController.m */,
+				2B2FFEF5289D90DD003DE1C6 /* SystemConfig.h */,
+				2B2FFEF6289D90F2003DE1C6 /* SystemConfig.m */,
+				2B2FFEF8289E2B20003DE1C6 /* WeatherModel.h */,
+				2B2FFEF9289E2B2C003DE1C6 /* WeatherModel.m */,
+				2B2FFEFB289E2B49003DE1C6 /* WeatherViewModel.h */,
+				2B2FFEFC289E2B5D003DE1C6 /* WeatherViewModel.m */,
+				2B2FFEFE289E2B7F003DE1C6 /* WeatherModelProtocol.h */,
+				2B2FFEFF289E2BC8003DE1C6 /* WeatherViewComtrollerProtocol.h */,
+				2B2FFF00289F8FC1003DE1C6 /* SystemDefines.h */,
+				2B2FFF04289FE603003DE1C6 /* WeatherTimelineCollectionViewCell.h */,
+				2B2FFF05289FE614003DE1C6 /* WeatherTimelineCollectionViewCell.m */,
+				2B2FFF0728A048CE003DE1C6 /* WeatherDaylineTableViewCell.h */,
+				2B2FFF0828A048E1003DE1C6 /* WeatherDaylineTableViewCell.m */,
 			);
 			path = CampWorkPro02;
 			sourceTree = "<group>";
@@ -256,6 +293,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B2FFF02289F98D0003DE1C6 /* data.bundle in Resources */,
+				2B2FFF0C28A135A3003DE1C6 /* resources.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,9 +361,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B2FFEFA289E2B2C003DE1C6 /* WeatherModel.m in Sources */,
+				2B2FFF0928A048E1003DE1C6 /* WeatherDaylineTableViewCell.m in Sources */,
 				2BE31387289BFDF500CBFCC3 /* AppDelegate.m in Sources */,
+				2B2FFEF7289D90F2003DE1C6 /* SystemConfig.m in Sources */,
+				2B2FFF06289FE614003DE1C6 /* WeatherTimelineCollectionViewCell.m in Sources */,
 				2BE31398289BFDF600CBFCC3 /* main.m in Sources */,
 				2BE313BC289BFF6000CBFCC3 /* MainViewController.m in Sources */,
+				2B2FFEFD289E2B5D003DE1C6 /* WeatherViewModel.m in Sources */,
 				2BE3138A289BFDF500CBFCC3 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
