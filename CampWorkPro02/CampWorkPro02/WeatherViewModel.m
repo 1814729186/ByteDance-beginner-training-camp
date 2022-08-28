@@ -20,14 +20,8 @@
     _weatherViewController = weatherViewController;
     
     // 构建观察者
-    
-    
-    
     return self;
 }
-
-
-
 
 
 @end

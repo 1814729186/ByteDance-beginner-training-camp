@@ -24,6 +24,7 @@
     MainViewController *mvc = [[MainViewController alloc]init];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:mvc];
     nav.navigationBarHidden = TRUE;
+    mvc.nav = nav;
     self.window.rootViewController = nav;
     [self.window makeKeyAndVisible];
 }

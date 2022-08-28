@@ -12,16 +12,20 @@
 #import "SystemDefines.h"
 
 
-
 @interface WeatherModel ()
-
 
 @property(nonatomic,strong) NSString * bundlePath;
 
+// 定位能力
+@property(nonatomic,strong) CLLocationManager *locationManager;
+
 @end
 
-
 @implementation WeatherModel
+@synthesize ifDataIsReady;
+@synthesize weatherData;
+
+
 
 - (NSString *)bundlePath{
     if(!_bundlePath){
@@ -67,7 +71,12 @@
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     // 参数信息
     /* version=v1&appid=77663576&appsecret=8smzn4wO */
-    NSDictionary *parameters = @{@"appid":@"77663576",@"version":@"v1",@"appsecret":@"8smzn4wO",@"unescape":@"1"};
+    NSMutableDictionary *parameters = [NSMutableDictionary dictionaryWithDictionary: @{@"appid":@"77663576",@"version":@"v1",@"appsecret":@"8smzn4wO",@"unescape":@"1"}];
+    if (!self.city) {
+        self.city = @"上海";
+    }
+    // 添加定位信息
+    [parameters setValue:self.city forKey:@"city"];
     // 设置请求参数的拼接
     manager.requestSerializer = [AFHTTPRequestSerializer serializer];
     // 设置接受的响应数据类型
@@ -92,15 +101,8 @@
             NSLog(@"error = %@",error);
         }
         // 获取网络数据失败，显示提示信息 TODO
-        
-        
-        
-        
-        
     }];
 }
-@synthesize ifDataIsReady;
 
-@synthesize weatherData;
 
 @end

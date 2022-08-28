@@ -5,7 +5,7 @@
 //  Created by mazhongping on 2022/8/6.
 //
 #import <Foundation/Foundation.h>
-
+#import <CoreLocation/CoreLocation.h>
 
 // 前期数据的数据状态
 typedef NS_ENUM(NSInteger,DataStatus){
@@ -22,6 +22,8 @@ typedef NS_ENUM(NSInteger,DataStatus){
 
 // 天气数据信息
 @property (nonatomic,strong) NSDictionary * weatherData;
+
+- (CLLocationManager *) locationManager;
 
 // 单例模式下获取实例对象
 +(instancetype) sharedInstance;

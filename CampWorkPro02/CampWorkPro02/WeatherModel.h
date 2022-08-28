@@ -13,4 +13,8 @@
 
 @property(nonatomic,weak) MainViewController * mvc;
 
+// 城市
+@property(nonatomic, strong) NSString * city;
+
+- (BOOL)locate;
 @end

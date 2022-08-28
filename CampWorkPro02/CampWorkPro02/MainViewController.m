@@ -19,7 +19,9 @@
 
 @interface MainViewController () <UICollectionViewDelegate,
 UICollectionViewDataSource,
-UICollectionViewDelegateFlowLayout,UITableViewDelegate,UITableViewDataSource>
+UICollectionViewDelegateFlowLayout,UITableViewDelegate,UITableViewDataSource,
+CLLocationManagerDelegate,
+UITextFieldDelegate>
 
 @property(nonatomic,strong) NSString * bundlePath;
 
@@ -82,7 +84,8 @@ UICollectionViewDelegateFlowLayout,UITableViewDelegate,UITableViewDataSource>
 // 异步多线程队列
 @property(nonatomic,strong) dispatch_queue_t serialQueue;
 
-
+// 定位功能
+@property (nonatomic,strong) CLLocationManager *locationManager;
 
 @end
 
@@ -113,10 +116,6 @@ UICollectionViewDelegateFlowLayout,UITableViewDelegate,UITableViewDataSource>
     }
     return _bundlePath;
 }
-
-
-
-
 
 - (void)viewDidLoad
 {
@@ -169,6 +168,7 @@ UICollectionViewDelegateFlowLayout,UITableViewDelegate,UITableViewDataSource>
     [self.cityChangeButton setFont:[UIFont systemFontOfSize:18]];
     
     // TODO 切换城市按钮
+    [self.cityChangeButton addTarget:self action:@selector(changeCity) forControlEvents:UIControlEventTouchUpInside];
     
     
     // 日期标签
@@ -195,8 +195,15 @@ UICollectionViewDelegateFlowLayout,UITableViewDelegate,UITableViewDataSource>
     }];
     [self.positionButton setImage:[UIImage imageWithContentsOfFile:[self.bundlePath stringByAppendingPathComponent:@"position.png"]] forState:UIControlStateNormal];
     
-    
-    
+    [[self.positionButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+//        if (![[WeatherModel sharedInstance] locate]) {
+//            UIAlertController * alertVC = [UIAlertController alertControllerWithTitle:@"提示" message:@"系统定位尚未打开，请到【设定-隐私】中手动打开" preferredStyle:UIAlertControllerStyleAlert];
+//            UIAlertAction * tipsAction = [UIAlertAction actionWithTitle:@"好的" style:UIAlertActionStyleCancel handler:nil];
+//            [alertVC addAction:tipsAction];
+//            [self presentViewController:alertVC animated:YES completion:nil];
+//        }
+        [self locate];
+    }];
     
     // 当前温度
     self.curTempLabel = [[UILabel alloc]init];
@@ -385,8 +392,8 @@ UICollectionViewDelegateFlowLayout,UITableViewDelegate,UITableViewDataSource>
         }];
     }];
     
-    
     [[self.bottomBarAirQualityButton rac_signalForControlEvents:UIControlEventTouchUpInside]subscribeNext:^(__kindof UIControl * _Nullable x) {
+        @strongify(self)
         self.bottomBarAirQualityButton.enabled = false;
         self.bottomBarWeatherButton.enabled = true;
         
@@ -640,7 +647,7 @@ UICollectionViewDelegateFlowLayout,UITableViewDelegate,UITableViewDataSource>
     NSDateComponents * comps1 = [calendar components:NSHourCalendarUnit fromDate:date];
     long hour =[comps1 hour];
     NSLog(@"curTime:%ld",hour);
-    hour = (hour - 8) % 24;
+    hour = (hour - 8 + 24) % 24;
     self.curTempLabel.text = [NSString stringWithFormat:@"%@°", weatherModel.weatherData[@"data"][0][@"hours"][hour][@"tem"] ];
     self.curWeatherLabel.text = weatherModel.weatherData[@"data"][0][@"hours"][hour][@"wea"];
     
@@ -765,6 +772,122 @@ UICollectionViewDelegateFlowLayout,UITableViewDelegate,UITableViewDataSource>
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 40;
+}
+
+-(void)locate{
+    //判断是否开启定位功能
+    if ([CLLocationManager locationServicesEnabled]){
+        self.locationManager = [[CLLocationManager alloc] init];
+        self.locationManager.delegate = self;
+        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+        self.locationManager.distanceFilter = 1;
+        [self.locationManager requestWhenInUseAuthorization];
+        [self.locationManager startUpdatingLocation];
+    }
+}
+
+//定位失败的异常处理
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
+    //    [self.delegate showLocationAlert];
+    //    UIAlertController * alertVC = [UIAlertController alertControllerWithTitle:@"允许\"定位\"提示" message:@"请在设置中打开定位" preferredStyle:UIAlertControllerStyleAlert];
+    //    UIAlertAction * ok = [UIAlertAction actionWithTitle:@"打开定位" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    //        //打开定位设置
+    //        NSURL *settingsURL = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
+    //        [[UIApplication sharedApplication] openURL:settingsURL];
+    //    }];
+    //    UIAlertAction * cancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+    //
+    //    }];
+    //    [alertVC addAction:cancel];
+    //    [alertVC addAction:ok];
+    //    [self presentViewController:alertVC animated:YES completion:nil];
+}
+//定位成功
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations{
+    [self.locationManager stopUpdatingLocation];
+    CLLocation *currentLocation = [locations lastObject];
+    CLGeocoder *geoCoder = [[CLGeocoder alloc] init];
+    
+    //反编码
+    [geoCoder reverseGeocodeLocation:currentLocation completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error){
+        if (placemarks.count > 0){
+            CLPlacemark *placeMark = placemarks[0];
+            NSString *currentCity = placeMark.locality;
+            if (!currentCity){
+                currentCity = @"无法定位当前城市";
+            }
+            NSLog(@"%@",currentCity);
+            [WeatherModel sharedInstance].city = [currentCity substringToIndex:currentCity.length-1];
+            // 从网络尝试获取数据并更新显示，异步更新
+            dispatch_async(self.serialQueue, ^{
+                [[WeatherModel sharedInstance] loadDataFromNet];
+            });
+            // 定位成功 alert
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"定位成功" message:currentCity preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *okButton = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                
+            }];
+            [alert addAction:okButton];
+
+            [self presentViewController:alert animated:YES completion:nil];
+            
+        }
+        else if (error == nil&& placemarks.count ==0){
+            NSLog(@"No location and error return");
+        }
+        else if (error){
+            NSLog(@"location error: %@ ",error);
+            // 定位成功 alert
+            UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"定位失败" message:@"" preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *okButton = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+                
+            }];
+            [alert addAction:okButton];
+
+            [self presentViewController:alert animated:YES completion:nil];
+        }
+    }];
+}
+
+- (void)changeCity {
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"更换城市" message:@"请输入更换的城市" preferredStyle:UIAlertControllerStyleAlert];
+    NSLog(@"%d",alert.view.userInteractionEnabled);
+    [alert addTextFieldWithConfigurationHandler:^(UITextField *textField) {
+        textField.placeholder = [WeatherModel sharedInstance].city;
+        textField.text = [WeatherModel sharedInstance].city;
+        textField.delegate = self;
+    }];
+
+    UIAlertAction *okButton = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        // Do something after clicking OK button
+        UITextField *textField = alert.textFields.firstObject;
+        if (![textField.text isEqualToString:@""]) {
+            [WeatherModel sharedInstance].city = textField.text;
+            // 从网络尝试获取数据并更新显示，异步更新
+            dispatch_async(self.serialQueue, ^{
+                [[WeatherModel sharedInstance] loadDataFromNet];
+            });
+            
+        }
+        
+    }];
+    UIAlertAction *cancelButton = [UIAlertAction actionWithTitle:@"Cancel" style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+       // Do something after clicking Cancel button
+    }];
+    [alert addAction:okButton];
+    [alert addAction:cancelButton];
+
+    [self presentViewController:alert animated:YES completion:nil];
+    
+    
+    
+
+}
+
+#pragma mark - UITextField Delegate
+ 
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
+    return YES;
 }
 
 @end

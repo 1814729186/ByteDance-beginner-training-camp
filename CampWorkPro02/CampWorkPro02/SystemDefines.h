@@ -30,3 +30,18 @@
 #endif
 #endif
 
+// 默认值自动生成
+#define DEFALUT_PROPERTY_CALL_METHODNAME(PROPERTY_NAME) p##PROPERTY_NAME
+#define DEFAULT_PROPERTY_GETTER(PROPERTY_NAME, DEFAULT_VALUE, TYPE) \
+- (TYPE *) PROPERTY_NAME {\
+    if (!_##PROPERTY_NAME) {\
+        _##PROPERTY_NAME = DEFAULT_VALUE;\
+        [self DEFALUT_PROPERTY_CALL_METHODNAME(PROPERTY_NAME)];\
+    }\
+    return _##PROPERTY_NAME;\
+}\
+- (void) DEFALUT_PROPERTY_CALL_METHODNAME(PROPERTY_NAME)
+
+
+
+#define COLOR_RGBA(r,g,b,a) [UIColor colorWithRed:r green:g blue:b alpha:a]

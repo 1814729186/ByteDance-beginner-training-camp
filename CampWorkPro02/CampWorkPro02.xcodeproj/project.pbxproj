@@ -57,6 +57,7 @@
 		2B2FFF0728A048CE003DE1C6 /* WeatherDaylineTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeatherDaylineTableViewCell.h; sourceTree = "<group>"; };
 		2B2FFF0828A048E1003DE1C6 /* WeatherDaylineTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeatherDaylineTableViewCell.m; sourceTree = "<group>"; };
 		2B2FFF0B28A135A3003DE1C6 /* resources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = resources.bundle; sourceTree = "<group>"; };
+		2BA85C9A28BA7E2A00DC80DB /* QIUIMacroDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QIUIMacroDefines.h; sourceTree = "<group>"; };
 		2BE31382289BFDF500CBFCC3 /* CampWorkPro02.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CampWorkPro02.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BE31385289BFDF500CBFCC3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2BE31386289BFDF500CBFCC3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -129,6 +130,7 @@
 		2BE31384289BFDF500CBFCC3 /* CampWorkPro02 */ = {
 			isa = PBXGroup;
 			children = (
+				2BA85C9A28BA7E2A00DC80DB /* QIUIMacroDefines.h */,
 				2BE31385289BFDF500CBFCC3 /* AppDelegate.h */,
 				2BE31386289BFDF500CBFCC3 /* AppDelegate.m */,
 				2BE31388289BFDF500CBFCC3 /* SceneDelegate.h */,
@@ -139,11 +141,11 @@
 				2BE313BB289BFF6000CBFCC3 /* MainViewController.m */,
 				2B2FFEF5289D90DD003DE1C6 /* SystemConfig.h */,
 				2B2FFEF6289D90F2003DE1C6 /* SystemConfig.m */,
+				2B2FFEFE289E2B7F003DE1C6 /* WeatherModelProtocol.h */,
 				2B2FFEF8289E2B20003DE1C6 /* WeatherModel.h */,
 				2B2FFEF9289E2B2C003DE1C6 /* WeatherModel.m */,
 				2B2FFEFB289E2B49003DE1C6 /* WeatherViewModel.h */,
 				2B2FFEFC289E2B5D003DE1C6 /* WeatherViewModel.m */,
-				2B2FFEFE289E2B7F003DE1C6 /* WeatherModelProtocol.h */,
 				2B2FFEFF289E2BC8003DE1C6 /* WeatherViewComtrollerProtocol.h */,
 				2B2FFF00289F8FC1003DE1C6 /* SystemDefines.h */,
 				2B2FFF04289FE603003DE1C6 /* WeatherTimelineCollectionViewCell.h */,
@@ -522,6 +524,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = P5Q8XB2P32;
@@ -549,6 +552,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++17";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = P5Q8XB2P32;
