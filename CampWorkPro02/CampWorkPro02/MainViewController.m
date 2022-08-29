@@ -290,7 +290,7 @@ UITextFieldDelegate>
         make.top.equalTo(self.line2).with.offset(2);
         make.size.mas_equalTo(CGSizeMake(335, 270));
     }];
-    
+
     self.weatherDaylineTableView.backgroundColor = [UIColor colorWithRed:1 green:1 blue:1 alpha:0];
     self.weatherDaylineTableView.delegate = self;
     self.weatherDaylineTableView.dataSource = self;
@@ -850,14 +850,18 @@ UITextFieldDelegate>
 }
 
 - (void)changeCity {
+    [self becomeFirstResponder];
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"更换城市" message:@"请输入更换的城市" preferredStyle:UIAlertControllerStyleAlert];
     NSLog(@"%d",alert.view.userInteractionEnabled);
     [alert addTextFieldWithConfigurationHandler:^(UITextField *textField) {
         textField.placeholder = [WeatherModel sharedInstance].city;
         textField.text = [WeatherModel sharedInstance].city;
+        [textField becomeFirstResponder];
+        textField.userInteractionEnabled = YES;
         textField.delegate = self;
     }];
 
+    self.view.userInteractionEnabled = YES;
     UIAlertAction *okButton = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
         // Do something after clicking OK button
         UITextField *textField = alert.textFields.firstObject;
@@ -877,11 +881,8 @@ UITextFieldDelegate>
     [alert addAction:okButton];
     [alert addAction:cancelButton];
 
-    [self presentViewController:alert animated:YES completion:nil];
-    
-    
-    
-
+    [self presentViewController:alert animated:YES completion:^{
+    }];
 }
 
 #pragma mark - UITextField Delegate

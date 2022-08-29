@@ -14,6 +14,8 @@
 		2B2FFF06289FE614003DE1C6 /* WeatherTimelineCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B2FFF05289FE614003DE1C6 /* WeatherTimelineCollectionViewCell.m */; };
 		2B2FFF0928A048E1003DE1C6 /* WeatherDaylineTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B2FFF0828A048E1003DE1C6 /* WeatherDaylineTableViewCell.m */; };
 		2B2FFF0C28A135A3003DE1C6 /* resources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2B2FFF0B28A135A3003DE1C6 /* resources.bundle */; };
+		2BA85CBA28BC66F700DC80DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BA85CB628BC66F700DC80DB /* LaunchScreen.storyboard */; };
+		2BA85CBE28BC678400DC80DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BA85CBC28BC678400DC80DB /* Main.storyboard */; };
 		2BE31387289BFDF500CBFCC3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE31386289BFDF500CBFCC3 /* AppDelegate.m */; };
 		2BE3138A289BFDF500CBFCC3 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE31389289BFDF500CBFCC3 /* SceneDelegate.m */; };
 		2BE31398289BFDF600CBFCC3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE31397289BFDF600CBFCC3 /* main.m */; };
@@ -58,6 +60,8 @@
 		2B2FFF0828A048E1003DE1C6 /* WeatherDaylineTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeatherDaylineTableViewCell.m; sourceTree = "<group>"; };
 		2B2FFF0B28A135A3003DE1C6 /* resources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = resources.bundle; sourceTree = "<group>"; };
 		2BA85C9A28BA7E2A00DC80DB /* QIUIMacroDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QIUIMacroDefines.h; sourceTree = "<group>"; };
+		2BA85CB728BC66F700DC80DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2BA85CBD28BC678400DC80DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2BE31382289BFDF500CBFCC3 /* CampWorkPro02.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CampWorkPro02.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BE31385289BFDF500CBFCC3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		2BE31386289BFDF500CBFCC3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -130,6 +134,8 @@
 		2BE31384289BFDF500CBFCC3 /* CampWorkPro02 */ = {
 			isa = PBXGroup;
 			children = (
+				2BA85CBC28BC678400DC80DB /* Main.storyboard */,
+				2BA85CB628BC66F700DC80DB /* LaunchScreen.storyboard */,
 				2BA85C9A28BA7E2A00DC80DB /* QIUIMacroDefines.h */,
 				2BE31385289BFDF500CBFCC3 /* AppDelegate.h */,
 				2BE31386289BFDF500CBFCC3 /* AppDelegate.m */,
@@ -295,8 +301,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BA85CBA28BC66F700DC80DB /* LaunchScreen.storyboard in Resources */,
 				2B2FFF02289F98D0003DE1C6 /* data.bundle in Resources */,
 				2B2FFF0C28A135A3003DE1C6 /* resources.bundle in Resources */,
+				2BA85CBE28BC678400DC80DB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,6 +414,25 @@
 			targetProxy = 2BE313A8289BFDF700CBFCC3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2BA85CB628BC66F700DC80DB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2BA85CB728BC66F700DC80DB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		2BA85CBC28BC678400DC80DB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2BA85CBD28BC678400DC80DB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		2BE313AF289BFDF700CBFCC3 /* Debug */ = {
